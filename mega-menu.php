@@ -107,8 +107,10 @@ function tucson_ebor_mega_menu( $atts, $content = null ) {
 		
 	$output .= '<ul class="sub-menu">';
 	
-	foreach( $items as $item ){
-		$output .= '<li><a href="' . $item->url . '" target="' . $item->target . '">'. $item->title .'</a></li>';
+	if( $items ){
+		foreach( $items as $item ){
+			$output .= '<li><a href="' . $item->url . '" target="' . $item->target . '">'. $item->title .'</a></li>';
+		}
 	}
 				
 	$output .= '</ul></li></ul></div>';
